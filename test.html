@@ -1,0 +1,15 @@
+---
+layout: null
+---
+<h1>Symlink Test</h1>
+<pre>
+ENV: {{ site.environment }}
+Config: {{ site.config | inspect }}
+Source: {{ site.source }}
+Destination: {{ site.destination }}
+Plugins: {{ site.plugins_dir }}
+Safe: {{ site.safe }}
+{% for f in site.static_files %}
+FILE: {{ f.path }} ({{ f.modified_time }})
+{% endfor %}
+</pre>
